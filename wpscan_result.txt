@@ -1,0 +1,126 @@
+_______________________________________________________________
+         __          _______   _____
+         \ \        / /  __ \ / ____|
+          \ \  /\  / /| |__) | (___   ___  __ _ _ __ ®
+           \ \/  \/ / |  ___/ \___ \ / __|/ _` | '_ \
+            \  /\  /  | |     ____) | (__| (_| | | | |
+             \/  \/   |_|    |_____/ \___|\__,_|_| |_|
+
+         WordPress Security Scanner by the WPScan Team
+                         Version 3.8.22
+       Sponsored by Automattic - https://automattic.com/
+       @_WPScan_, @ethicalhack3r, @erwan_lr, @firefart
+_______________________________________________________________
+
+[32m[+][0m URL: https://koelschewoerter.de/ [91.204.46.112]
+[32m[+][0m Started: Thu Dec  8 14:57:47 2022
+
+Interesting Finding(s):
+
+[32m[+][0m Headers
+ | Interesting Entries:
+ |  - server: nginx
+ |  - x-cache-status: BYPASS
+ | Found By: Headers (Passive Detection)
+ | Confidence: 100%
+
+[32m[+][0m robots.txt found: https://koelschewoerter.de/robots.txt
+ | Interesting Entries:
+ |  - /wp-admin/
+ |  - /wp-admin/admin-ajax.php
+ | Found By: Robots Txt (Aggressive Detection)
+ | Confidence: 100%
+
+[32m[+][0m XML-RPC seems to be enabled: https://koelschewoerter.de/xmlrpc.php
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 100%
+ | References:
+ |  - http://codex.wordpress.org/XML-RPC_Pingback_API
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_ghost_scanner/
+ |  - https://www.rapid7.com/db/modules/auxiliary/dos/http/wordpress_xmlrpc_dos/
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_xmlrpc_login/
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_pingback_access/
+
+[32m[+][0m WordPress readme found: https://koelschewoerter.de/liesmich.html
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 100%
+
+[32m[+][0m The external WP-Cron seems to be enabled: https://koelschewoerter.de/wp-cron.php
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 60%
+ | References:
+ |  - https://www.iplocation.net/defend-wordpress-from-ddos
+ |  - https://github.com/wpscanteam/wpscan/issues/1299
+
+[32m[+][0m WordPress version 5.8.6 identified (Outdated, released on 0001-01-01).
+ | Found By: Rss Generator (Passive Detection)
+ |  - https://koelschewoerter.de/feed/, <generator>https://wordpress.org/?v=5.8.6</generator>
+ |  - https://koelschewoerter.de/comments/feed/, <generator>https://wordpress.org/?v=5.8.6</generator>
+ |  - https://koelschewoerter.de/shop/feed/, <generator>https://wordpress.org/?v=5.8.6</generator>
+
+[32m[+][0m WordPress theme in use: konte
+ | Location: https://koelschewoerter.de/wp-content/themes/konte/
+ | Last Updated: 2022-11-02T10:55:59.000Z
+ | [33m[!][0m The version is out of date, the latest version is 2.2.0
+ | Style URL: https://koelschewoerter.de/wp-content/themes/konte/style.css
+ | Style Name: Konte
+ | Style URI: https://themeforest.net/item/konte-minimal-modern-woocommerce-wordpress-theme/23162599?ref=uixthemes
+ | Description: Konte is a fully responsive Premium WordPress Theme with a pixel perfect design and extensive functi...
+ | Author: UIX Themes
+ | Author URI: https://uix.store
+ |
+ | Found By: Urls In Homepage (Passive Detection)
+ | Confirmed By: Urls In 404 Page (Passive Detection)
+ |
+ | Version: 2.1.4 (80% confidence)
+ | Found By: Style (Aggressive Detection)
+ |  - https://koelschewoerter.de/wp-content/themes/konte/style.css, Match: 'Version: 2.1.4'
+
+
+[34m[i][0m Plugin(s) Identified:
+
+[32m[+][0m autoptimize
+ | Location: https://koelschewoerter.de/wp-content/plugins/autoptimize/
+ | Latest Version: 3.1.4
+ | Last Updated: 2022-12-03T07:04:00.000Z
+ |
+ | Found By: Urls In Homepage (Passive Detection)
+ | Confirmed By: Urls In 404 Page (Passive Detection)
+ |
+ | The version could not be determined.
+
+[32m[+][0m woocommerce
+ | Location: https://koelschewoerter.de/wp-content/plugins/woocommerce/
+ | Last Updated: 2022-12-07T18:30:00.000Z
+ | [33m[!][0m The version is out of date, the latest version is 7.1.1
+ |
+ | Found By: Meta Generator (Passive Detection)
+ |
+ | Version: 6.1.2 (60% confidence)
+ | Found By: Meta Generator (Passive Detection)
+ |  - https://koelschewoerter.de/, Match: 'WooCommerce 6.1.2'
+
+[32m[+][0m wordpress-seo
+ | Location: https://koelschewoerter.de/wp-content/plugins/wordpress-seo/
+ | Last Updated: 2022-11-29T09:39:00.000Z
+ | [33m[!][0m The version is out of date, the latest version is 19.11
+ |
+ | Found By: Comment (Passive Detection)
+ |
+ | Version: 17.9 (60% confidence)
+ | Found By: Comment (Passive Detection)
+ |  - https://koelschewoerter.de/, Match: 'optimized with the Yoast SEO plugin v17.9 -'
+
+
+[34m[i][0m No Config Backups Found.
+
+[33m[!][0m No WPScan API Token given, as a result vulnerability data has not been output.
+[33m[!][0m You can get a free API token with 25 daily requests by registering at https://wpscan.com/register
+
+[32m[+][0m Finished: Thu Dec  8 14:58:07 2022
+[32m[+][0m Requests Done: 185
+[32m[+][0m Cached Requests: 0
+[32m[+][0m Data Sent: 59.184 KB
+[32m[+][0m Data Received: 9.017 MB
+[32m[+][0m Memory used: 305.613 MB
+[32m[+][0m Elapsed time: 00:00:19
